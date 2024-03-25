@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Raycaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="buttons">
+            <button id="editor" class="editor_b">Enter Editor Mode</button>
+            <button id="create_collidable" class="editor_b" style="visibility: hidden;">Create new collidables</button>
+            <button id="help" class="editor_b" style="visibility: hidden;">Help!</button>
+        </div>
+
+        <div id="help_div" style="visibility: hidden;">
+            <button id="close_help" style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+            <h1 style="font-size: 24px; color: #333;">Editor mode tutorial!</h1>
+            <p style="font-size: 18px; color: #666; margin-bottom: 20px;">Learn how to create new collidables</p>
+            <ol style="font-size: 16px; color: #333; text-align: left;">
+                <li style="margin-bottom: 10px;">
+                    <strong>CLICK</strong> on <i>Create new collidables button</i>. You will now see the text <i>You are now creating new collidables</i>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>LEFT CLICK</strong> where you want your new collidable to start. You will see a <span style="color:green;">green circle</span> on the starting position.
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>LEFT CLICK</strong> where you want your new collidable to end. You will see the collidable.
+                </li>
+                <li>
+                    Repeat the process for new collidables or <strong>EXIT</strong> by clicking on <i>You are now creating new collidables</i>.
+                </li>
+            </ol>
+
+            <p style="font-size: 18px; color: #666; margin-bottom: 20px;">Learn how to delete collidables</p>
+            <ol style="font-size: 16px; color: #333; text-align: left;">
+                <li style="margin-bottom: 10px;">
+                    <strong>LEFT CLICK</strong> on any collidable. You should now see the collidable in <span style="color:green;">green</span>. Make sure you are not creating collidables. 
+                </li>
+                <li style="margin-bottom: 10px;">
+                    <strong>LEFT CLICK</strong> anywhere if you don't want to delete that collidable. 
+                </li>
+                <li>
+                    <strong>RIGHT CLICK</strong> anywhere to delete the collidable.
+                </li>
+            </ol>
+
+        </div>
+
+        <canvas id="raycaster"></canvas>    
+    </div>
+    
+
+    <script src="vector.js" ></script>
+    <script src="ray.js"></script>
+    <script src="collidableEntity.js" ></script>
+    <script src="emitEntity.js"></script>
+    <script src="editorMode.js"></script>
+    <script src="raycaster.js" ></script>
+</body>
+</html>
